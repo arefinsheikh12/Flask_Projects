@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, roborto;
+            margin: 0;
+            padding: 0;
+            background-color: #fafbfc;
+            color: #110f0f;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #6b1cc5;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #2f0986;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Define the width for each column */
+        th:nth-child(1),
+        td:nth-child(1) {
+            width: 20%; /* Adjust the width as needed */
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 10%; /* Adjust the width as needed */
+        }
+
+        th:nth-child(3),
+        td:nth-child(3) {
+            width: 30%; /* Adjust the width as needed */
+        }
+
+        th:nth-child(4),
+        td:nth-child(4) {
+            width: 1%; /* Adjust the width as needed */
+        }
+
+        th:nth-child(5),
+        td:nth-child(5) {
+            width: 10%; /* Adjust the width as needed */
+        }
+
+        th {
+            background-color: #6b1cc5;
+            color: #fff;
+        }
+
+        tr:nth-child(even),
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        /* Form styles */
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Horizontally center-align content */
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"] {
+            width: 20%;
+            padding: 10px;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 2px;
+        }
+
+        .add-task-btn {
+            background-color: #4c5a5000;
+            color: #fff;
+            border: none;
+            padding: 10px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .add-task-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+</body>
+</html>

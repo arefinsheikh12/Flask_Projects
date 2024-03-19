@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Update Task</h1>
+
+    <div class="form">
+        <form action="/update/{{ task.id }}" method="POST">
+            <!-- Checkbox input for completion status -->
+            <label for="completed">Completed:</label>
+            <input type="checkbox" id="completed" name="completed" {% if task.completed %}checked{% endif %}>
+            <br><br>
+            <!-- Text input for updating task content -->
+            <label for="tasks_to_be_done">Task:</label>
+            <input type="text" name="tasks_to_be_done" id="tasks_to_be_done" value="{{ task.tasks_to_be_done }}">
+            <br><br>
+            <!-- Single submit button for updating task -->
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</div>
+{% endblock %}
