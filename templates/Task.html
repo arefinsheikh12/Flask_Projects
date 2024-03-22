@@ -10,6 +10,25 @@
     {% if tasks|length < 1 %}
     <h4 style="text-align: center">There are no tasks. Create one below!</h4>
     <!-- Form for adding a new task -->
+    <form action="/" method="POST">
+        <!-- Form fields for date, time, task content, and completion status -->
+        <!-- Ensure that the input names match the request.form keys in the Flask route -->
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+        
+        <label for="tasks_to_be_done">Task:</label>
+        <input type="text" id="tasks_to_be_done" name="tasks_to_be_done" required><br><br>
+        
+        <label for="completed">Completed:</label>
+        <input type="checkbox" id="completed" name="completed">
+        <br>
+        <br>
+        <!-- Submit button for adding the task -->
+        <input type="submit" value="Add Task">
+    </form>
 
     {% else %}
     <!-- Table for displaying tasks -->
@@ -57,7 +76,6 @@
         <input type="checkbox" id="completed" name="completed">
         <br>
         <br>
-        
         <!-- Submit button for adding the task -->
         <input type="submit" value="Add Task">
     </form>
